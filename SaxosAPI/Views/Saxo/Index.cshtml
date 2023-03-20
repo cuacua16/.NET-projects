@@ -1,0 +1,25 @@
+﻿@model List<Saxo>
+
+	<h1>Saxos</h1>
+
+	<button class="btn btn-success">
+		<a class="text-decoration-none text-warning" asp-action="Create">Crear Saxofon</a>
+	</button>
+
+	<table class="table">
+		<thead >
+			<tr>
+			<th>Tipo</th><th>Marca</th>
+			</tr>
+
+		</thead>
+		<tbody>
+		@foreach(var saxo in Model) {
+			<tr>
+				<td>@Html.DisplayFor(m=>saxo.Tipo)</td>
+				<td>@Html.DisplayFor(m=>saxo.Marca.Nombre)</td>
+			</tr>
+			
+		}
+		</tbody>
+	</table>

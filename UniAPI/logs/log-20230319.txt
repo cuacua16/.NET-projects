@@ -1,0 +1,77 @@
+2023-03-19 10:02:40.591 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-03-19 10:02:40.699 -03:00 [INF] warn: 19/03/2023 10:02:40.692 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-03-19 10:02:41.257 -03:00 [INF] info: 19/03/2023 10:02:41.257 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.14 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2023-03-19 10:02:41.965 -03:00 [INF] info: 19/03/2023 10:02:41.965 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (46ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdatedAt], [u].[UpdatedBy], [u].[isDeleted]
+      FROM [Users] AS [u]
+2023-03-19 10:02:42.180 -03:00 [INF] HTTP GET /api/Users responded 200 in 3186.3204 ms
+2023-03-19 10:02:52.998 -03:00 [INF] info: 19/03/2023 10:02:52.998 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.14 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2023-03-19 10:02:53.294 -03:00 [INF] info: 19/03/2023 10:02:53.294 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (99ms) [Parameters=[@__userLogins_Username_0='string' (Size = 50), @__userLogins_Password_1='string' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdatedAt], [u].[UpdatedBy], [u].[isDeleted]
+      FROM [Users] AS [u]
+      WHERE (@__userLogins_Username_0 = [u].[Name]) AND (@__userLogins_Password_1 = [u].[Password])
+2023-03-19 10:02:53.525 -03:00 [INF] HTTP POST /api/Account/GetToken responded 200 in 589.5869 ms
+2023-03-19 10:04:02.878 -03:00 [INF] info: 19/03/2023 10:04:02.878 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.14 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2023-03-19 10:04:02.916 -03:00 [INF] info: 19/03/2023 10:04:02.916 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (33ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdatedAt], [u].[UpdatedBy], [u].[isDeleted]
+      FROM [Users] AS [u]
+2023-03-19 10:04:02.922 -03:00 [INF] HTTP GET /api/Users responded 200 in 154.8022 ms
+2023-03-19 10:04:12.514 -03:00 [INF] HTTP GET /WeatherForecast responded 403 in 419.8717 ms
+2023-03-19 10:04:19.957 -03:00 [INF] info: 19/03/2023 10:04:19.957 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.14 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2023-03-19 10:04:19.960 -03:00 [INF] info: 19/03/2023 10:04:19.960 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (1ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdatedAt], [u].[UpdatedBy], [u].[isDeleted]
+      FROM [Users] AS [u]
+2023-03-19 10:04:19.962 -03:00 [INF] HTTP GET /api/Users responded 200 in 6.0347 ms
+2023-03-19 10:05:03.257 -03:00 [ERR] HTTP GET /api/Students responded 500 in 158.8755 ms
+System.InvalidOperationException: Unable to resolve service for type 'OBwebAPI.Services.StudentService' while attempting to activate 'OBwebAPI.Controllers.StudentsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2023-03-19 10:05:03.343 -03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'OBwebAPI.Services.StudentService' while attempting to activate 'OBwebAPI.Controllers.StudentsController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.GetService(IServiceProvider sp, Type type, Type requiredBy, Boolean isDefaultParameterRequired)
+   at lambda_method10(Closure , IServiceProvider , Object[] )
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerActivatorProvider.<>c__DisplayClass7_0.<CreateActivator>b__0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2023-03-19 10:05:56.357 -03:00 [INF] HTTP GET /WeatherForecast responded 401 in 264.5535 ms
+2023-03-19 10:06:10.307 -03:00 [WRN] Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-03-19 10:06:10.327 -03:00 [INF] warn: 19/03/2023 10:06:10.323 CoreEventId.SensitiveDataLoggingEnabledWarning[10400] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-03-19 10:06:10.602 -03:00 [INF] info: 19/03/2023 10:06:10.602 CoreEventId.ContextInitialized[10403] (Microsoft.EntityFrameworkCore.Infrastructure) 
+      Entity Framework Core 6.0.14 initialized 'UniversityDBContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.14' with options: SensitiveDataLoggingEnabled DetailedErrorsEnabled 
+2023-03-19 10:06:11.085 -03:00 [INF] info: 19/03/2023 10:06:11.085 RelationalEventId.CommandExecuted[20101] (Microsoft.EntityFrameworkCore.Database.Command) 
+      Executed DbCommand (40ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [u].[Id], [u].[CreatedAt], [u].[CreatedBy], [u].[DeletedAt], [u].[DeletedBy], [u].[Email], [u].[LastName], [u].[Name], [u].[Password], [u].[UpdatedAt], [u].[UpdatedBy], [u].[isDeleted]
+      FROM [Users] AS [u]
+2023-03-19 10:06:11.270 -03:00 [INF] HTTP GET /api/Users responded 200 in 2228.4822 ms

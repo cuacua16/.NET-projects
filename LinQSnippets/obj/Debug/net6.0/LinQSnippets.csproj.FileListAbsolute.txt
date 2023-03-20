@@ -1,0 +1,12 @@
+C:\Users\CuaCua\source\repos\LinQSnippets\bin\Debug\net6.0\LinQSnippets.deps.json
+C:\Users\CuaCua\source\repos\LinQSnippets\bin\Debug\net6.0\LinQSnippets.dll
+C:\Users\CuaCua\source\repos\LinQSnippets\bin\Debug\net6.0\LinQSnippets.pdb
+C:\Users\CuaCua\source\repos\LinQSnippets\obj\Debug\net6.0\LinQSnippets.csproj.AssemblyReference.cache
+C:\Users\CuaCua\source\repos\LinQSnippets\obj\Debug\net6.0\LinQSnippets.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\CuaCua\source\repos\LinQSnippets\obj\Debug\net6.0\LinQSnippets.AssemblyInfoInputs.cache
+C:\Users\CuaCua\source\repos\LinQSnippets\obj\Debug\net6.0\LinQSnippets.AssemblyInfo.cs
+C:\Users\CuaCua\source\repos\LinQSnippets\obj\Debug\net6.0\LinQSnippets.csproj.CoreCompileInputs.cache
+C:\Users\CuaCua\source\repos\LinQSnippets\obj\Debug\net6.0\LinQSnippets.dll
+C:\Users\CuaCua\source\repos\LinQSnippets\obj\Debug\net6.0\refint\LinQSnippets.dll
+C:\Users\CuaCua\source\repos\LinQSnippets\obj\Debug\net6.0\LinQSnippets.pdb
+C:\Users\CuaCua\source\repos\LinQSnippets\obj\Debug\net6.0\ref\LinQSnippets.dll
